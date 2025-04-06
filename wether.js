@@ -33,7 +33,7 @@ const fetchData = async (cityValue)=>{
     console.log(typeof response)
 
     if (!response.ok) {
-        throw new Error("Invalid city name or API error"); // ✅ Handle 404, etc.
+        throw new Error("Invalid city name or API error");
     }
     const data = await response.json();
     console.log(response)
@@ -42,10 +42,10 @@ const fetchData = async (cityValue)=>{
     
 }
 
-function displayData(d)
+function displayData(data)
 {
-    const {name , main , weather} = d
-    console.log(d)
+    const {name , main , weather} = data
+    console.log(data)
     wetherOutputDiv.classList.remove('hidden')
     cityName.textContent = name
     temprature.textContent = `Temperature : ${main.temp}°C`
