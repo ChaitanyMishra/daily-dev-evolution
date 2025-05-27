@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Text Analyzer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1 class="heading">String Manipulation PlayGround</h1>
+            <section class="inputSec">
+                <textarea name="inputStr" id="inputStr" placeholder="Type AnyThing..."></textarea>
+                <div id="charCount" class="feedback-text">Characters: 0</div> 
+                <div id="output" class="output-box">Output will appear here</div>
+                <div class="control">
+                    <div class="operations-grid">
+                        <div class="operation-group">
+                            <h3 class="operation-heading"><i class="fas fa-tools"></i>Basic Operations</h3>
+                            <select name="operations" id="operations" title="StringOperations">
+                                <option value="" disabled selected>Select Operation</option>
+                                <optgroup label="Analysis">
+                                    <option value="length">Find Length</option>
+                                    <option value="textStats">Text Statistics</option>
+                                    <option value="findstr">Find Character</option>
+                                </optgroup>
+                                <optgroup label="Transformations">
+                                    <option value="palindrome">Check Palindrome</option>
+                                    <option value="revStr">Reverse String</option>
+                                    <option value="reverseSentence">Reverse Sentence</option>
+                                </optgroup>
+                                <optgroup label="Counting & Frequency">
+                                    <option value="vowelCount">Count Vowels</option>
+                                    <option value="charFreq">Character Frequency</option>
+                                    <option value="wordFreq">Word Frequency</option>
+                                </optgroup>
+                                <optgroup label="Text Cleanup">
+                                    <option value="removeSpaces">Remove Extra Spaces</option>
+                                    <option value="caseConvert">Case Converter</option>
+                                    <option value="trimText">Trim Text</option>
+                                    <option value="removeSpecialChars">Remove Special Characters</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        
+                        <div class="operation-group">
+                            <h3 class="operation-heading"><i class="fas fa-bolt"></i>Quick Actions</h3>
+                            <div class="operation-buttons">
+                                <button class="operation-btn" onclick="quickOperation('uppercase')">UPPERCASE</button>
+                                <button class="operation-btn" onclick="quickOperation('lowercase')">lowercase</button>
+                                <button class="operation-btn" onclick="quickOperation('capitalize')">Capitalize</button>
+                                <button class="operation-btn" onclick="quickOperation('copy')">Copy Text</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button type="button" id="find" class="btn">Analyze Text</button>
+                    
+                </div>
+                
+            </section>
+        </div>
+    </div>
+
+   
+    <script src="script.js"></script>
+</body>
+</html>
