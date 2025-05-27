@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,body{
+            background-color: #212121;
+            color: aliceblue;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s ease;
+
+            box-sizing: border-box;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .theme:hover{
+            box-shadow: 1px 1px 1px 1px gray;
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+        .container{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .theme{
+            margin-right: 1rem;
+            height: 5rem;
+            width: 5rem;
+            border-radius: 0.7rem;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #box1{
+            border: 5px solid rgb(0, 0, 98);
+            background-color: blue;
+        }
+        #box2{
+            border: 5px solid gray;
+            background-color: black;
+        }
+        #box3{
+            border: 5px solid rgb(81, 0, 0);
+            background-color: red;
+        }
+        #box4{
+            border: 5px solid bisque;
+            background-color: white;
+            color: black;
+        }
+        .heading{
+            position: absolute;
+            top:0;
+            text-align: center;
+            color:chocolate
+        }
+        .heading2{
+
+            color: burlywood;
+        }
+        .bmiCalculatior{
+            margin-top: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .guid{
+            font-size: 1.2rem;
+            line-height: 2rem;
+            list-style: none;
+            
+        }
+        #height , #weight{
+        margin: 1.2rem;
+            font-size: 1rem;
+            padding: 1rem;
+            border: 1 px solid blue;
+            text-align: center;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        #heightLabel , #weightLabel{
+            font-size: 1.2rem;
+        }
+        #calculateBmi:hover{
+            box-shadow: 1px 1px 1px 1px aquamarine;
+            background-color: aquamarine;
+            transform: scale(1.01);
+            border: none;
+        }
+        #calculateBmi{
+            margin-bottom: 2rem;
+            width: 25%;
+            padding:1rem;
+            border-radius: 0.4rem;
+            font-size: 1.3rem;
+            margin-top: 1rem;
+            background-color: cadetblue;
+            cursor: pointer;
+        }
+        #ans{
+            font-size: 1.5rem;
+            height: 20vh;
+        }
+        .yellow-text {
+            color: rgb(255, 255, 0);
+        }
+        .green-text {
+            color: rgb(0, 255, 0);
+        }
+        .red-text {
+            color: red;
+        }
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+        .heading2{
+            text-align: center;
+            display: block;
+        }
+       .digitleClock , .section{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+       }
+       .container2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 4.5rem;
+        width: 11.5rem;
+        margin: 1rem;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        text-align: center;
+        color:red;
+        background-color: rgb(163, 117, 0);
+        font-size: 2rem;
+    }
+    .form{
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .main{
+        font-size: 1rem;
+        align-items: center;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+    }
+    #guessInput::placeholder{
+        color: rgb(56, 56, 56);
+    }
+    #guessInput{
+        border: 5px solid grey;
+        margin-bottom: 3rem;
+        width: 17%;
+        padding: 1rem;
+        text-align: center;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        font-size: 1rem;
+        background-color: antiquewhite;
+    }
+    #submitGuess , #start , #stop , #startBtn , #stopBtn{
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        cursor: pointer;
+        width: 15%;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        margin-top: 1rem;
+        font-size: 1rem;
+        background-color: rgb(255, 223, 180);
+        margin-bottom: 1.3rem;
+    }
+
+       
+    </style>
+</head>
+<body>
+    
+    <section class="container">
+        <div class="heading"><h1>Project - 01 color changer</h1></div>
+        <div id="box1" class="theme">Blue</div>
+        <div id="box2" class="theme">Black</div>
+        <div id="box3" class="theme">Red</div>
+        <div id="box4" class="theme">White</div>
+    </section>
+
+    <section class="bmiCalculatior">
+            <h2 id="bmiGuideHeading">[roject-02-BMI GUIDE</h2>
+            <ul class="guid">
+            <li><span>Under Weight = Less than 18.6Kg</span></li>
+            <li><span>Normal Weight = Between 18.6Kg and 24.9</span></li>
+            <li><span>Over Weight = More than 24.9Kg</span></li>
+        </ul>
+        <h1 class="heading2">Find Your BMI</h1>
+        <div class="height" id="heightInput">
+            <label for="height" id="heightLabel">Enter Height</label>
+            <input type="text" name="" id="height" placeholder="Enter Height in Centi-Meter">
+        </div>
+        <div class="weight" id="weightInput">
+            <label for="weight" id="weightLabel">Enter Weight</label>
+            <input type="text" name="" id="weight" placeholder="Enter Weight in Kg">
+        </div>
+
+        <button id="calculateBmi">Calcutate</button>
+        <div id="ans">
+        </div>
+    </section>
+
+    <section class="digitleClock">
+        <h1 style="color:rgb(0, 255, 0); font-size:1.7rem">project-03-Digitle Clock</h1>
+        <div class="container2">
+        </div>
+    </section>
+
+    <section class="project4">
+        <form action="" class="form">
+        <h2 class="heading4">Project-04-Guess The Number</h2>
+        <p>Try To Guess Number Between 1 To 100</p>
+        <p>You Have Total 10 Attempts To Guess Right Number</p>
+        <p>If Your Number Matches Computer Number You Won!</p>
+        <h1 style="font-size:3.5rem">Guess The Number</h1>
+
+        <div class="main">
+            <input type="text" name="" id="guessInput" placeholder="Guess Number i.g - 23">
+            <button type="submit" id="submitGuess">Submit Your Guess</button>
+        </div>
+        <div class="result">
+            <p style="font-size: 1.3rem;"><span id="previousGuesses"> Your Previous Guesses Are:  </span></p>
+            <p style="font-size: 1.3rem;"><span id="attempt">Attempt Remaning</span></p>
+            <p id="help" style="font-size: 1.3rem;"></p>
+        </div>
+    </form>
+    </section>
+    <div class="section">
+        <h1 style="color:rgb(0, 255, 0); font-size:1.7rem"> project-05-stop watch</h1>
+        <div class="container2" id="stopWatch">0</div>
+        <button id="start" style="font-size:1.5rem;">start</button>
+        <button id="stop" style="font-size:1.5rem;">stop</button>
+    </div>
+
+    <div class="project6" style="height:100vh; margin-top:15rem;">
+        <h1 style="text-align: center; ">
+            Infinite Background color changer
+        </h1>
+        <div class="button">
+            <input type="button" value="Start" id="startBtn">
+            <input type="button" value="Stop" id="stopBtn">
+        </div>
+    </div>
+
+    <div class="project7" >
+    </div>
+    <script src="colorChanger.js"></script>
+</body>
+</html>

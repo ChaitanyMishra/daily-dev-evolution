@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    html,body{
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        width: 100vw;
+    }
+    #selectiorId {
+        background-color: rgb(1, 98, 67);
+        margin: 5rem;
+        padding: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        line-height: 2rem;
+        border-radius: 2rem;
+        box-shadow: 8px 8px 1px rgb(0, 85, 0) ,  -8px -8px 1px lightgreen;
+    }
+
+    .changeText{
+        background-color: bisque;
+        display: flex;
+        font-size: 1.35rem;
+        align-items: center;
+        justify-content: center;
+        gap:1rem;
+        padding: 3rem;
+    }
+    #input{
+        height: 2rem;
+        border-radius: 0.525rem;
+        background-color: rgb(195, 195, 195);
+        color:darkgoldenrod;
+        font-size: 1.2rem;
+        padding: 1rem;
+        
+    }
+
+    #inputChange{
+        padding: 1rem;
+        border-radius: 0.525rem;
+        
+
+    }
+    #outputWindow{
+        height: 2rem;
+        border-radius: 0.525rem;
+        background-color: rgb(255, 255, 255);
+        color:darkgoldenrod;
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+
+    .example-2 , #feedback{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color:cadetblue ;
+    }
+    .list{
+        font-size: 1.2rem;
+    }
+    #selectCity{
+        padding: 1rem;
+        font-size: 1.1rem;
+        text-align: center;
+        border-radius: 0.5rem;
+        margin: 1rem;
+        background-color: beige;
+    }
+    .heading{
+        background-color: yellow;
+    }
+    .order{
+        background-color: crimson;
+        display: flex;
+       
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        color: aliceblue;
+    }
+    #confirm , .feedbackSubmit , #darkMode{
+        margin: 1rem;
+        padding: 1rem;
+        text-align: center;
+        background-color: darksalmon;
+        font-size: 1.2rem;
+        border-radius: 0.5rem;
+        color:darkred;
+        font-weight: 700;
+    }
+    #addItem ,#inputItem , #delCity ,#feedBackInput{
+        padding: 1rem;
+        font-size: 1.1rem;
+        text-align: center;
+        border-radius: 0.5rem;
+        margin: 1rem;
+        background-color: beige;
+    }
+
+</style>
+
+</head>
+<body id="body">
+    <div id="selectiorId">
+        <h1 id="heading">JavaScript DOM</h1>
+        <p class="info">This is the first paragraph.</p>
+        <p class="info">This is the second paragraph.</p>
+        <button>Click Me</button>
+
+    </div>
+
+    <div class="changeText">
+        <label for="name">Enter Your Name</label>
+        <input type="text" name="name" id="input" placeholder="Enter Name">
+        <button id="inputChange">Submit!</button>
+        <input type="output" id="outputWindow">
+    </div>
+<div class="example-2">
+    <h2 id="heading">Traversing in the Dom</h2>
+    <ul id="cityList">
+        <li class="list">kanpur</li>
+        <li class="list">Lakhnow</li>
+        <li class="list">Banaras</li>
+    </ul>
+    <button id="selectCity">Click Me!</button>
+    <input type="text" name="" id="inputItem" placeholder="Enter city name!">
+    <button id="addItem">Add New City</button>
+    <button id="delCity">remove Item!</button>
+</div>
+
+<div class="order">
+    order:-<span id="confirfOrder"> press Confirm to Confirm Your Oder </span><br>
+    <button id="confirm">Confirm!</button>
+</div>
+<form action="" id="feedback">
+<label for="feedBackInput" style="font-size: 1.5rem; margin-top:1rem;">Enter Your feedback: </label>
+<input type="text" placeholder="Enter Feedback: " id="feedBackInput">
+<button class="feedbackSubmit" type="button">Submit</button>
+<p id="feedbackDisplay" style="font-size: 1.3rem;">Your Feedback: </p>
+
+
+
+</form>
+
+<button id="darkMode" type="button" style="margin:20rem; ">Dark Mode</button>
+
+
+<script src="jsLearning.js"></script>
+</body>
+</html>
