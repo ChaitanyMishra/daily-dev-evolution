@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🚀 Mini Projects Showcase
 
 Welcome to my **Mini Projects** repository! Here, I showcase all the small projects I’ve built during my learning journey in web development. These projects serve as practical demonstrations of various programming concepts and web development techniques using **HTML**, **CSS**, **JavaScript**, and other modern web technologies.
@@ -59,3 +60,6 @@ Submit a pull request with a description of the changes you made.
 📜 License
 This repository is open-source and available under the MIT License.
 
+=======
+# daily-dev-evolution
+>>>>>>> 579704bca5001b64b5ade39810dda533323d7ff7
